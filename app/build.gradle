@@ -10,8 +10,7 @@ apply from: '../shared_dependencies.gradle'
 
 android {
     namespace 'com.example.mymovies'
-    compileSdk 33
-
+    compileSdk 34
 
 
     defaultConfig {
