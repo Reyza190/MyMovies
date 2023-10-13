@@ -31,7 +31,8 @@ android {
         jvmTarget = '17'
     }
     lint {
-        baseline = file("lint-baseline.xml")
+        // https://github.com/bumptech/glide/issues/4940
+        lintConfig = file("$rootDir/android_glide_lint.xml")
     }
 }
 hilt {
