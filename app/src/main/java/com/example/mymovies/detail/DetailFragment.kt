@@ -12,6 +12,7 @@ import com.bumptech.glide.Glide
 import com.example.core.utils.Url
 import com.example.mymovies.R
 import com.example.mymovies.databinding.FragmentDetailBinding
+import com.squareup.picasso.Picasso
 import dagger.hilt.android.AndroidEntryPoint
 
 
@@ -52,7 +53,7 @@ class DetailFragment : Fragment() {
         }
 
         binding.apply {
-            Glide.with(requireActivity())
+            Picasso.get()
                 .load(Url.image + data.image)
                 .into(ivFilm)
             tvTitle.text = data.title

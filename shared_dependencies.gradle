@@ -29,4 +29,7 @@ dependencies {
 
     //leakCanary
     debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.10'
+
+    //picasso
+    implementation "com.squareup.picasso:picasso:$picasso_version"
 }

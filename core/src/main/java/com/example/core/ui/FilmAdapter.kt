@@ -10,6 +10,7 @@ import com.example.core.R
 import com.example.core.databinding.ItemListFilmBinding
 import com.example.core.domain.model.Film
 import com.example.core.utils.Url
+import com.squareup.picasso.Picasso
 
 class FilmAdapter(private val onItemClick: (Film) -> Unit) : RecyclerView.Adapter<FilmAdapter.FilmViewHolder>() {
 
@@ -38,7 +39,7 @@ class FilmAdapter(private val onItemClick: (Film) -> Unit) : RecyclerView.Adapte
         fun bind(data: Film){
             with(binding){
                 tvTitle.text = data.title
-                Glide.with(itemView.context)
+                Picasso.get()
                     .load(Url.image + data.image)
                     .into(ivFilm)
                 root.setOnClickListener {
