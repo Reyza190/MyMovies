@@ -8,7 +8,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import com.bumptech.glide.Glide
 import com.example.core.utils.Url
 import com.example.mymovies.R
 import com.example.mymovies.databinding.FragmentDetailBinding
