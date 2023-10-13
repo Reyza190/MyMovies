@@ -11,7 +11,6 @@ dependencies {
     implementation "androidx.cardview:cardview:$cardview_version"
     implementation "androidx.recyclerview:recyclerview:$recyclerview_version"
     implementation "com.google.android.material:material:$material_version"
-    implementation "com.github.bumptech.glide:glide:$glide_version"
 
     api "com.google.dagger:dagger:$dagger_version"
     kapt "com.google.dagger:dagger-compiler:$dagger_version"
