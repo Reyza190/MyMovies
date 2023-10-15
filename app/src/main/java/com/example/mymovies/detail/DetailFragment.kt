@@ -6,6 +6,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.activity.result.ActivityResultLauncher
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.example.core.utils.Url
@@ -52,9 +53,13 @@ class DetailFragment : Fragment() {
         }
 
         binding.apply {
-            Picasso.get()
-                .load(Url.image + data.image)
-                .into(ivFilm)
+            if (Url.image.isEmpty()&& data.image.isNullOrEmpty()){
+                Log.e("data", data.image.toString())
+            }else{
+                Picasso.get()
+                    .load(Url.image + data.image)
+                    .into(ivFilm)
+            }
             tvTitle.text = data.title
             tvRelease.text =
                 resources.getText(R.string.release_date).toString() + " " + data.releaseDate

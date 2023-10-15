@@ -1,6 +1,7 @@
 package com.example.core.ui
 
 import android.annotation.SuppressLint
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -38,9 +39,13 @@ class FilmAdapter(private val onItemClick: (Film) -> Unit) : RecyclerView.Adapte
         fun bind(data: Film){
             with(binding){
                 tvTitle.text = data.title
-                Picasso.get()
-                    .load(Url.image + data.image)
-                    .into(ivFilm)
+                if (Url.image.isEmpty() && data.image.isNullOrEmpty()){
+                    Log.e("data", data.image.toString())
+                }else{
+                    Picasso.get()
+                        .load(Url.image + data.image)
+                        .into(ivFilm)
+                }
                 root.setOnClickListener {
                     onItemClick(data)
                 }
